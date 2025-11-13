@@ -1,0 +1,35 @@
+
+=== Polymarket Data Collection Pipeline ===
+LLM:        OPENAI (gpt-4o)
+Limit:      1000 markets
+Batch size: 5 markets per LLM call
+Seed:       42
+Output dir: outputs
+Log level:  INFO
+Dry run:    False
+
+
+[Step 1/2] Fetching and rating markets...
+2025-11-08 17:26:30 - data_fetch.fetch_rate_markets - INFO - Starting fetch_and_rate_markets
+2025-11-08 17:26:30 - data_fetch.fetch_rate_markets - INFO - Using OpenAI gpt-4o for market rating
+2025-11-08 17:26:31 - data_fetch.fetch_rate_markets - INFO - Fetching up to 1000 markets from CLOB API (with pagination)
+2025-11-08 17:26:31 - data_fetch.fetch_rate_markets - INFO - Fetching batch at offset 0 (size: 100)...
+2025-11-08 17:26:31 - httpx - INFO - HTTP Request: GET https://gamma-api.polymarket.com/markets?limit=100&offset=0&closed=false&order=liquidity&ascending=false "HTTP/1.1 200 OK"
+2025-11-08 17:26:32 - data_fetch.fetch_rate_markets - INFO - Fetched 100 markets (total: 100)
+2025-11-08 17:26:32 - data_fetch.fetch_rate_markets - INFO - Fetching batch at offset 100 (size: 100)...
+2025-11-08 17:26:33 - httpx - INFO - HTTP Request: GET https://gamma-api.polymarket.com/markets?limit=100&offset=100&closed=false&order=liquidity&ascending=false "HTTP/1.1 200 OK"
+2025-11-08 17:26:33 - data_fetch.fetch_rate_markets - INFO - Fetched 100 markets (total: 200)
+2025-11-08 17:26:34 - data_fetch.fetch_rate_markets - INFO - Fetching batch at offset 200 (size: 100)...
+2025-11-08 17:26:34 - httpx - INFO - HTTP Request: GET https://gamma-api.polymarket.com/markets?limit=100&offset=200&closed=false&order=liquidity&ascending=false "HTTP/1.1 200 OK"
+2025-11-08 17:26:35 - data_fetch.fetch_rate_markets - INFO - Fetched 100 markets (total: 300)
+2025-11-08 17:26:35 - data_fetch.fetch_rate_markets - INFO - Fetching batch at offset 300 (size: 100)...
+2025-11-08 17:26:36 - httpx - INFO - HTTP Request: GET https://gamma-api.polymarket.com/markets?limit=100&offset=300&closed=false&order=liquidity&ascending=false "HTTP/1.1 200 OK"
+2025-11-08 17:26:36 - data_fetch.fetch_rate_markets - INFO - Fetched 100 markets (total: 400)
+2025-11-08 17:26:37 - data_fetch.fetch_rate_markets - INFO - Fetching batch at offset 400 (size: 100)...
+2025-11-08 17:26:37 - httpx - INFO - HTTP Request: GET https://gamma-api.polymarket.com/markets?limit=100&offset=400&closed=false&order=liquidity&ascending=false "HTTP/1.1 200 OK"
+2025-11-08 17:26:38 - data_fetch.fetch_rate_markets - INFO - Fetched 100 markets (total: 500)
+2025-11-08 17:26:38 - data_fetch.fetch_rate_markets - INFO - Fetching batch at offset 500 (size: 100)...
+2025-11-08 17:26:39 - httpx - INFO - HTTP Request: GET https://gamma-api.polymarket.com/markets?limit=100&offset=500&closed=false&order=liquidity&ascending=false "HTTP/1.1 200 OK"
+2025-11-08 17:26:39 - data_fetch.fetch_rate_markets - INFO - Fetched 100 markets (total: 600)
+2025-11-08 17:26:39 - data_fetch.fetch_rate_markets - INFO - Fetching batch at offset 600 (size: 100)...
+2025-11-08 17:26:40 - httpx - INFO - HTTP Request: GET https://gamma-api.polymarket.com/markets?limit=100&offset=600&closed=false&order=liquidity&ascending=false "HTTP/1.1 200 OK"
