@@ -14,6 +14,7 @@ Most wallets on Polymarket behave in a “normal” way:
 A small subset of wallets, however, may:
 - Trade **very selectively** (only a few markets).
 - Focus on **specific earnings markets**.
+      - Normal wallets will trade on **multiple** earnings markets
 - Show **unusually strong, consistent PnL** in those markets.
 - Enter and exit positions at **suspiciously good timing**.
 
